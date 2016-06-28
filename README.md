@@ -10,3 +10,9 @@ to run the jobs periodically.
 ```
 docker run -d -v /var/run/docker.sock:/var/run/docker.sock -v $JENKINS_HOME:/var/jenkins_home -p 8080:8080 hirenj/docker-jenkins
 ```
+
+To trigger docker jobs, add a freestyle build with a step that includes the shell
+
+```
+sudo docker run hello-world
+```
